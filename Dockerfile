@@ -22,5 +22,6 @@ RUN mv composer.phar /bin/composer
 # Set up the volumes and working directory
 VOLUME ["$APP_DIR"]
 WORKDIR "$APP_DIR"
+EXPOSE 8080
 
 ENTRYPOINT ["composer", "run"]
