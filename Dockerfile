@@ -1,5 +1,7 @@
 FROM php:cli-alpine
 
+ENV APP_DIR "/app"
+
 # Memory Limit
 RUN echo "memory_limit=-1" > $PHP_INI_DIR/conf.d/memory-limit.ini
 
@@ -18,5 +20,7 @@ RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" &&
 RUN mv composer.phar /bin/composer
 
 # Set up the volumes and working directory
-VOLUME ["/app"]
-WORKDIR /app
+VOLUME ["$APP_DIR"]
+WORKDIR "$APP_DIR"
+
+ENTRYPOINT ["composer", "run"]
