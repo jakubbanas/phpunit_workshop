@@ -18,6 +18,9 @@
         "run": [
             "@composer install",
             "php -S 0.0.0.0:8080 web/index.php"
+        ],
+        "test": [
+            "./vendor/bin/phpunit --bootstrap ./app/bootstrap.php ./tests/TestTest"
         ]
     }
 }
