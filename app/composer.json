@@ -2,7 +2,7 @@
     "name": "phpunit_workshop",
     "autoload": {
         "psr-4": {
-            "App\\": "./src"
+            "App\\": "src/"
         }
     },
     "require": {
