@@ -1,6 +1,6 @@
 FROM php:cli-alpine
 
-ENV APP_DIR "/app"
+ENV APP_DIR "/data"
 
 # Memory Limit
 RUN echo "memory_limit=-1" > $PHP_INI_DIR/conf.d/memory-limit.ini
