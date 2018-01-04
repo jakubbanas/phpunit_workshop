@@ -2,4 +2,4 @@
 
 $container = require __DIR__ . '/../app/bootstrap.php';
 
-$container->get("\App\Model\Foo");
+dump($container->get("\App\Model\Book"));
