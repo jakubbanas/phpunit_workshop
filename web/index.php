@@ -1,5 +1,1 @@
-<?php
-
-$container = require __DIR__ . '/../app/bootstrap.php';
-
-echo "it works";
+<h1>It Works</h1>
