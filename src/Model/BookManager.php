@@ -3,7 +3,7 @@
 namespace App\Model;
 
 use App\Core\Database;
-use Model\Book;
+use App\Model\Book;
 
 class BookManager
 {
@@ -22,9 +22,14 @@ class BookManager
         return $this->db->execute("add query here");
     }
 
-    public function getAllById(int $id): Book
+    public function getOneById(int $id): Book
     {
-        
+        $books = $this->db->execute("add query here");
+        foreach ($books as $book) {
+            if ($book->getId() === $id) {
+                return $book;
+            }
+        }
     }
 
     public function save(Book $book): void

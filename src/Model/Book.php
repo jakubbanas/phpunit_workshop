@@ -7,9 +7,15 @@ class Book
     private $id;
     private $title;
 
-    public function getId(): integer
+    public function getId(): int
     {
         return $this->id;
+    }
+    
+    public function setId(int $id): Book
+    {
+        $this->id = $id;
+        return $this;
     }
 
     public function getTitle(): string
