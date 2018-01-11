@@ -1,4 +1,13 @@
 # phpunit_workshop
 
-How to run:
- `docker run --rm -v $PWD:/data -p 8080:8080 -h phpunit_workshop kuba792/phpunit_workshop`
+## How to run:
+  >`composer run`
+  
+   OR run in Docker environment
+  >`composer docker` 
+
+## How to run tests:
+  >`composer test` 
+
+   OR run in Docker environment
+  >`composer docker-test`

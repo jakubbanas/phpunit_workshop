@@ -6,8 +6,6 @@
         }
     },
     "require": {
-        "doctrine/orm": "^2.5",
-        "monolog/monolog": "^1.23",
         "php-di/php-di": "^5.4"
     },
     "require-dev": {
@@ -15,12 +13,18 @@
         "symfony/var-dumper": "^4.0"
     },
     "scripts": {
+        "docker": [
+            "docker run -d -v $PWD:/data -p 8080:8080 --name=phpunit_workshop kuba792/phpunit_workshop composer run"
+        ],
         "run": [
             "@composer install",
             "php -S 0.0.0.0:8080 web/index.php"
         ],
         "test": [
             "./vendor/bin/phpunit --bootstrap ./app/bootstrap.php ./tests"
+        ],
+        "docker-test": [
+            "docker exec phpunit_workshop ./vendor/bin/phpunit --bootstrap ./app/bootstrap.php ./tests"
         ]
     }
 }
