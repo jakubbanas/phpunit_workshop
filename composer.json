@@ -22,10 +22,10 @@
             "php -S 0.0.0.0:8080 web/index.php"
         ],
         "test": [
-            "./vendor/bin/phpunit --bootstrap ./app/bootstrap.php ./tests"
-        ],
-        "docker-test": [
             "docker exec phpunit_workshop ./vendor/bin/phpunit --bootstrap ./app/bootstrap.php ./tests"
+        ],
+        "humbug": [
+            "docker exec phpunit_workshop ./vendor"
         ]
     }
 }
