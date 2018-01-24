@@ -25,6 +25,9 @@
         ],
         "docker-test": [
             "docker exec phpunit_workshop ./vendor/bin/phpunit --bootstrap ./app/bootstrap.php ./tests"
+        ],
+        "docker-sh": [
+            "docker exec -it phpunit_workshop sh"
         ]
     }
 }
