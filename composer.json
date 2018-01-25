@@ -22,10 +22,13 @@
             "php -S 0.0.0.0:8080 web/index.php"
         ],
         "test": [
-            "docker exec phpunit_workshop ./vendor/bin/phpunit --bootstrap ./app/bootstrap.php ./tests"
+            "docker exec phpunit_workshop ./vendor/bin/phpunit"
         ],
         "infection": [
             "docker exec phpunit_workshop phpdbg -qrr ./vendor/bin/infection"
+        ],
+        "coverage" : [
+            "docker exec phpunit_workshop phpdbg -qrr ./vendor/bin/phpunit --coverage-xml /tmp/infection/coverage-xml"
         ]
     }
 }

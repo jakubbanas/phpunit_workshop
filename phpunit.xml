@@ -3,7 +3,6 @@
          xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/6.5/phpunit.xsd"
          bootstrap="app/bootstrap.php"
          forceCoversAnnotation="true"
-         beStrictAboutCoversAnnotation="true"
          beStrictAboutOutputDuringTests="true"
          beStrictAboutTodoAnnotatedTests="true"
          verbose="true">
