@@ -1,13 +1,15 @@
 # phpunit_workshop
 
 ## How to run:
-  >`composer run`
-  
-   OR run in Docker environment
+  * run in Docker environment
   >`composer docker` 
 
 ## How to run tests:
-  >`composer test` 
-
-   OR run in Docker environment
+  * run tests in Docker environment
   >`composer docker-test`
+  
+  * generate test coverage
+  >`composer coverage`
+
+  * run mutation tests
+  >`composer infection`
