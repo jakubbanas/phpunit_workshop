@@ -22,6 +22,10 @@ RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" &&
 
 RUN mv composer.phar /bin/composer
 
+# install phpdbg
+RUN apk add --no-cache \
+    php7-phpdbg
+
 # Set up the volumes and working directory
 VOLUME ["$APP_DIR"]
 WORKDIR "$APP_DIR"

@@ -11,7 +11,7 @@
     "require-dev": {
         "phpunit/phpunit": "^6.5",
         "symfony/var-dumper": "^4.0",
-        "humbug/humbug": "~1.0@dev"
+        "infection/infection": "^0.7.0"
     },
     "scripts": {
         "docker": [
@@ -24,8 +24,8 @@
         "test": [
             "docker exec phpunit_workshop ./vendor/bin/phpunit --bootstrap ./app/bootstrap.php ./tests"
         ],
-        "humbug": [
-            "docker exec phpunit_workshop ./vendor"
+        "infection": [
+            "docker exec phpunit_workshop phpdbg -qrr ./vendor/bin/infection"
         ]
     }
 }
