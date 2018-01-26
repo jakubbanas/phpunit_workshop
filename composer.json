@@ -10,7 +10,8 @@
     },
     "require-dev": {
         "phpunit/phpunit": "^6.5",
-        "symfony/var-dumper": "^4.0"
+        "symfony/var-dumper": "^4.0",
+        "infection/infection": "^0.7.0"
     },
     "scripts": {
         "docker": [
@@ -21,10 +22,13 @@
             "php -S 0.0.0.0:8080 web/index.php"
         ],
         "test": [
-            "./vendor/bin/phpunit --bootstrap ./app/bootstrap.php ./tests"
+            "docker exec phpunit_workshop ./vendor/bin/phpunit"
         ],
-        "docker-test": [
-            "docker exec phpunit_workshop ./vendor/bin/phpunit --bootstrap ./app/bootstrap.php ./tests"
+        "infection": [
+            "docker exec phpunit_workshop phpdbg -qrr ./vendor/bin/infection"
+        ],
+        "coverage" : [
+            "docker exec phpunit_workshop phpdbg -qrr ./vendor/bin/phpunit --coverage-xml /tmp/infection/coverage-xml"
         ]
     }
 }

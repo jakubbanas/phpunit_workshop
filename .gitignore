@@ -1,2 +1,4 @@
 vendor/
 nbproject/
+infection-log.txt
+.idea
