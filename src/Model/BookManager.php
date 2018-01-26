@@ -16,7 +16,7 @@ class BookManager
         $this->db = $db;
     }
 
-    public function getAll(): Array
+    public function getAll(): array
     {
         /** @TODO: add query here */
         return $this->db->execute("add query here");
